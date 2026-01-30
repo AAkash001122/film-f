@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b05c91e3.css",
+    "main.js": "/static/js/main.44dd25b4.js",
+    "static/media/homeBanner2.jpg": "/static/media/homeBanner2.97a7b89bc39086e1cb99.jpg",
+    "static/media/remixicon.svg?t=1590207869815": "/static/media/remixicon.9cedd2150922ead84869.svg",
+    "static/media/homeBanner4.jpg": "/static/media/homeBanner4.5e1afc803d72011231b2.jpg",
+    "static/media/homeBanner3.jpg": "/static/media/homeBanner3.ee2d398004e1ff188e70.jpg",
+    "static/media/remixicon.eot?t=1590207869815": "/static/media/remixicon.5cb99e6cba5a4619063f.eot",
+    "static/media/remixicon.ttf?t=1590207869815": "/static/media/remixicon.f2616f597cf98f38d234.ttf",
+    "static/media/background.jpg": "/static/media/background.33ad29f87c57829f520f.jpg",
+    "static/media/remixicon.woff?t=1590207869815": "/static/media/remixicon.8d09fa11700ed63cf96e.woff",
+    "static/media/remixicon.woff2?t=1590207869815": "/static/media/remixicon.90668f6f9b3c2c18a090.woff2",
+    "static/media/logo.png": "/static/media/logo.7bfa6567ebb0ca647fd5.png",
+    "static/media/footer.jpg": "/static/media/footer.68f266dd123c456357b0.jpg",
+    "static/media/empty.svg": "/static/media/empty.886ff6e335e03a69f272cdaa137a8e6a.svg",
+    "static/media/notfound.svg": "/static/media/notfound.72c72610f1f95385050ed29ac36338aa.svg",
+    "index.html": "/index.html",
+    "main.b05c91e3.css.map": "/static/css/main.b05c91e3.css.map",
+    "main.44dd25b4.js.map": "/static/js/main.44dd25b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b05c91e3.css",
+    "static/js/main.44dd25b4.js"
+  ]
+}
