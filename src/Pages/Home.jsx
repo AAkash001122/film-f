@@ -7,13 +7,12 @@ const Home = ({ setWatchList, watchList }) => {
   const [topMovies, setTopMovies] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/movies/popular')
-      .then(res => res.json())
-      .then(data => {
-        setTopMovies(data);
-      })
-      .catch(err => console.log(err));
-  }, []);
+  fetch(process.env.REACT_APP_API_URL + "/api/reels/popular")
+    .then(res => res.json())
+    .then(data => setReels(data))
+    .catch(err => console.error("Reels fetch error:", err));
+}, []);
+
 
   return (
     <>

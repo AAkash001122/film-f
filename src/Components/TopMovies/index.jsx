@@ -5,14 +5,13 @@ import './style.css';
 const TopMovies = ({ filterCtg, setFilterCtg, setWatchList, watchList }) => {
   const [topItems, setTopItems] = useState([]);
 
-  useEffect(() => {
-    fetch('http://localhost:5000/api/reels/popular')
-      .then(res => res.json())
-      .then(data => {
-        setTopItems(data); // backend se reels aa rahi hain
-      })
-      .catch(err => console.error('Reels fetch error:', err));
-  }, []);
+ useEffect(() => {
+  fetch(process.env.REACT_APP_API_URL + "/api/reels/popular")
+    .then(res => res.json())
+    .then(data => setReels(data))
+    .catch(err => console.error("Reels fetch error:", err));
+}, []);
+
 
   const displayedItems = topItems;
 
