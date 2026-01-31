@@ -1,16 +1,18 @@
 /* style.css */
 .page-header.home-header {
   min-height: 90vh;
-  height: auto; /* ← yeh important change */
-  padding: 120px 0 100px; /* content ke liye breathing space */
-  background: url("./homeBanner2.jpg") no-repeat center center;
+  padding: 0;
+  background: url("./homeBanner12.jpg") no-repeat center center;
   background-size: cover;
   background-position: center 20%;
 
   display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
+/* container ko center ke liye */
 .page-header .container {
   width: 100%;
   max-width: 1400px;
@@ -18,95 +20,66 @@
   margin: 0 auto;
 }
 
+/* banner content exact center */
 .banner-content {
-  max-width: 720px;
+  max-width: 100%;
   color: white;
   z-index: 2;
+  transform: translateY(-62px);
 }
 
+/* FIRST LINE */
 .banner-content .sub-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #e4d804;
-  margin-bottom: 0.8rem;
-  letter-spacing: 2px;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: 4px;
   text-transform: uppercase;
 }
 
+/* SECOND LINE */
 .banner-content .title {
-  font-size: clamp(2.4rem, 2.5vw, 2rem);
+  font-size: 2rem;
   font-weight: 800;
-  line-height: 1;
-  margin-bottom: 1.8rem;
+  line-height: 1.2;
+  margin-top: 5px;
+  margin-bottom: 0;
+  letter-spacing: 6px;
+  color: rgb(144, 56, 4);
+  text-transform: uppercase;
 }
 
+/* span ki zarurat nahi ab */
 .banner-content .title span {
-  color: #e4d804;
+  color: inherit;
 }
 
+/* button completely hide */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 32px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: white;
-  background-color: #e4d804;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(228, 216, 4, 0.35);
+  display: none;
 }
 
-.btn:hover {
-  background-color: #d1c107;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(228, 216, 4, 0.45);
-  color: white;
-}
-
-.btn i {
-  font-size: 1.4rem;
-}
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 992px) {
-  .page-header.home-header {
-    min-height: 100vh;
-    height: auto;
-    padding: 100px 0 100px;
+  .banner-content .sub-title {
+    font-size: 3.2rem;
   }
 
-  .banner-content {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .btn {
-    padding: 12px 28px;
-    font-size: 1rem;
+  .banner-content .title {
+    font-size: 1.6rem;
+    letter-spacing: 4px;
   }
 }
 
 @media (max-width: 576px) {
-  .page-header.home-header {
-    min-height: 70vh;
-    padding: 100px 0 80px;
-  }
-
   .banner-content .sub-title {
-    font-size: 1.3rem;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
   }
 
   .banner-content .title {
-    font-size: clamp(2rem, 8vw, 3.4rem);
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 320px;
-    justify-content: center;
-    margin: 0 auto;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
   }
 }

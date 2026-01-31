@@ -1,6 +1,6 @@
 /* Home Banner Design */
 .home-header {
-  background: url(./homeBanner4.jpg) no-repeat center center fixed;
+  background: url(./homeBanner7.jpg) no-repeat center center fixed;
   background-size: cover;
   min-height: 95vh;
   display: flex;
@@ -64,3 +64,5 @@
   background: #e4d804;
   color: #1e1b29;
 }
+
+/*  */

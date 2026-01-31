@@ -3,6 +3,7 @@ import HomeBanner from "../Components/HomeBanner";
 import Subscribe from "../Components/Subscribe";
 import TopMovies from "../Components/TopMovies";
 
+
 const Home = ({ setWatchList, watchList }) => {
   const [topMovies, setTopMovies] = useState([]);
 

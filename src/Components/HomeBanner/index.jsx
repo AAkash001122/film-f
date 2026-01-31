@@ -1,21 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './style.css';
-
 const HomeBanner = () => {
+  const fontOnly = {
+    fontFamily: '"Playfair Display", serif',
+  };
+
   return (
     <header className="page-header home-header">
       <div className="container">
         <div className="banner-content">
-          <h4 className="sub-title">Marble</h4>
-          <h1 className="title">
-            Unlimited <span>Movie</span>, TV Shows, Web Series & More.
+          <h4 className="sub-title" style={fontOnly}>
+            White Marble
+          </h4>
+
+          <h1 className="title" style={fontOnly}>
+            Film <span style={fontOnly}>Production</span>
           </h1>
 
-          {/* <Link to="/#Movies" className="btn">
+          {/*
+          <Link to="/#Movies" className="btn" style={fontOnly}>
             <i className="ri-arrow-right-line"></i>
             Browse Movies
-          </Link> */}
+          </Link>
+          */}
         </div>
       </div>
     </header>

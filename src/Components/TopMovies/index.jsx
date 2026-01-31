@@ -1,18 +1,28 @@
 import React, { useEffect, useState } from "react";
 import MovieCard from "../MovieCard";
+import Pagination from "../Pagination";
 import "./style.css";
 
-const TopMovies = ({ filterCtg, setFilterCtg, setWatchList, watchList }) => {
+const TopMovies = ({ setWatchList, watchList }) => {
   const [topItems, setTopItems] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const itemsPerPage = 8;
 
   useEffect(() => {
     fetch(process.env.REACT_APP_API_URL + "/api/reels/popular")
       .then((res) => res.json())
-      .then((data) => setTopItems(data)) // ✅ setTopItems now
+      .then((data) => setTopItems(data))
       .catch((err) => console.error("Reels fetch error:", err));
   }, []);
 
-  const displayedItems = topItems;
+  // 🔥 PAGINATION LOGIC (FRONTEND ONLY)
+  const totalPages = Math.ceil(topItems.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentItems = topItems.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
 
   return (
     <section className="new-sec top-rated-sec" id="movies">
@@ -23,7 +33,7 @@ const TopMovies = ({ filterCtg, setFilterCtg, setWatchList, watchList }) => {
         </div>
 
         <div className="row movies-grid">
-          {displayedItems.map((item) => (
+          {currentItems.map((item) => (
             <MovieCard
               key={item._id}
               movie={item}
@@ -32,6 +42,15 @@ const TopMovies = ({ filterCtg, setFilterCtg, setWatchList, watchList }) => {
             />
           ))}
         </div>
+
+        {/* ✅ PAGINATION */}
+        {totalPages > 1 && (
+          <Pagination
+            totalPages={totalPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+        )}
       </div>
     </section>
   );

@@ -4,6 +4,8 @@ import SubBanner from '../Components/SubBanner';
 import Subscribe from '../Components/Subscribe';
 import NoData from '../Components/Search/noData';
 
+
+
 const Favourites = ({watchList, setWatchList}) => {
   return (
     <>
