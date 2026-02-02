@@ -27,7 +27,7 @@ const Navbar = ({ setShowSearch, watchList }) => {
   }, []);
 
   const handleScroll = () => {
-    if (window.scrollY > 245) {
+    if (window.scrollY > 50) {
       setSticky(true);
     } else {
       setSticky(false);
@@ -80,11 +80,16 @@ const Navbar = ({ setShowSearch, watchList }) => {
                 </Link>
               </li>
 
-              <li className='navbar-item'>
-                <Link className='navbar-link' to='/#movies' onClick={() => setShowSide(false)}>
-                  Movies
-                </Link>
-              </li>
+              <li className="navbar-item">
+  <a
+    href="#movies"
+    className="navbar-link"
+    onClick={() => setShowSide(false)}
+  >
+    Movies
+  </a>
+</li>
+
 
               <li className='navbar-item'>
                 <Link className='navbar-link favourites' to='/favourites' onClick={() => setShowSide(false)}>

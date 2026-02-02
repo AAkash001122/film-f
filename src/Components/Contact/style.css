@@ -4,21 +4,27 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(10, 12, 20, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  backdrop-filter: blur(8px);
 }
 
 .contact-modal {
-  background: #fff;
   width: 90%;
-  max-width: 380px; /* 👈 width reduce */
-  padding: 20px;
-  border-radius: 8px;
+  max-width: 380px; /* SAME */
+  padding: 20px; /* SAME */
+  border-radius: 14px;
   position: relative;
   box-sizing: border-box;
+
+  /* 🔥 PREMIUM DARK GLASS CARD */
+  background: linear-gradient(145deg, #141824, #1c2130);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .close-btn {
@@ -29,33 +35,90 @@
   background: none;
   font-size: 18px;
   cursor: pointer;
+  color: #9aa4ff;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+  color: #ff6b6b;
+}
+
+.contact-modal h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 12px; /* SAME */
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 10px; /* SAME */
+  border-radius: 8px;
+  border: 1px solid #2c3250;
+  background: #0f1320;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #7b82b2;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #6c7cff;
+  box-shadow: 0 0 0 2px rgba(108, 124, 255, 0.25);
+  background: #11162a;
+}
+
+.contact-form textarea {
+  resize: none;
+  min-height: 80px;
 }
 
 .contact-form button {
-  background: #007bff;
-  color: white;
-  padding: 10px;
+  margin-top: 6px;
+  padding: 10px; /* SAME */
+  border-radius: 10px;
   border: none;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+
+  /* 🔥 NEON GRADIENT BUTTON */
+  background: linear-gradient(135deg, #6c7cff, #00e0ff);
+  color: #0a0d1a;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 224, 255, 0.45);
 }
 
 @media (max-width: 480px) {
   .contact-modal {
     width: 92%;
-    max-width: 300px; /* 👈 mobile ke liye aur tight */
-    padding: 16px;
+    max-width: 300px; /* SAME */
+    padding: 16px; /* SAME */
   }
 
   .contact-form input,
